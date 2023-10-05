@@ -14,11 +14,13 @@ const Category = () => {
 
   useEffect(() => {
     setProducts(categoriesMap[category]);
+    console.log(categoriesMap)
+    console.log(category)
   }, [category, categoriesMap]);
 
   return (
     <Fragment>
-      <Title>{category.toUpperCase()}</Title>
+      <Title>{category.toLowerCase()}</Title>
       <CategoryContainer>
         {products &&
           products.map((product) => (
